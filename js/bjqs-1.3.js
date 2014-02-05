@@ -464,6 +464,7 @@
         };
 
         var conf_markers = function() {
+            var $sub_wrapper;
 
             // create a wrapper for our markers
             $m_wrapper = $('<ol class="bjqs-markers"></ol>');
@@ -497,7 +498,9 @@
 
             });
 
-            $m_wrapper.appendTo($wrapper);
+            $sub_wrapper = $('<div class="bjqs-markers-wrapper"/>')
+            $m_wrapper.appendTo($sub_wrapper);
+            $sub_wrapper.appendTo($wrapper);
             $m_markers = $m_wrapper.find('li');
 
             // center the markers
